@@ -11,6 +11,8 @@ body {
     color: #F3F3F3;
     line-height: 1.6;
     overflow-x: hidden;
+    /* Smooth scrolling */
+    scroll-behavior: smooth;
 }
 
 /* Header */
@@ -20,6 +22,21 @@ header {
     align-items: center;
     padding: 20px 40px;
     background-color: #111;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    /* Adding animation */
+    animation: slideInDown 1s ease;
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
 
 header .logo {
@@ -56,6 +73,11 @@ header .cta {
     font-size: 12px;
     font-weight: bold;
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+header .cta:hover {
+    transform: scale(1.05);
 }
 
 /* Hero Section */
@@ -63,15 +85,27 @@ header .cta {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 100px 40px;
+    padding: 150px 40px; /* Adjusted padding for spacing */
     background-color: #060606;
     color: #F3F3F3;
-    height: 100vh;
+    height: 90vh;
 }
 
 .hero-content {
     text-align: left;
-    max-width: 600px;
+    max-width: 700px;
+    animation: fadeInLeft 1.5s ease;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .hero-content .subheading {
@@ -80,7 +114,7 @@ header .cta {
     text-transform: uppercase;
     color: #F3F3F3CC;
     margin-bottom: 15px;
-    letter-spacing: 3px;
+    letter-spacing: 9px;
 }
 
 .hero-content .title {
@@ -99,22 +133,45 @@ header .cta {
     font-size: 16px;
     margin-top: 20px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content .btn-enquire:hover {
+    background-color: #e65a00;
 }
 
 .hero-image-wrapper {
     flex-grow: 1;
-    height: 100%;
+    height: 90%;
     position: relative;
-    overflow: hidden;
+    overflow: show;
+    animation: fadeInRight 1.5s ease;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .hero-image img {
     width: 100%;
-    height: 100%;
+    height: 90%;
     object-fit: contain;
+    transform: scale(0.9);
+    transition: transform 0.5s ease;
 }
 
-/* Portfolio Section */
+.hero-image img:hover {
+    transform: scale(1);
+}
+
+/* Portfolio Section - Carousel */
 .portfolio {
     padding: 100px 40px;
     background-color: #060606;
@@ -128,56 +185,90 @@ header .cta {
     margin-bottom: 50px;
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Four columns for desktop */
-    gap: 30px;
+.projects-carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 650px;
+}
+
+.carousel-track {
+    display: flex;
+    width: calc(300px * 8); /* Multiply by number of images */
+    animation: scroll 16s linear infinite;
+    transition: transform 0.3s ease-in-out;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-300px * 4)); /* Scroll back to the starting point */
+    }
 }
 
 .project-card {
+    min-width: 300px;
+    height: 300px;
+    margin-right: 10px;
     background-color: #202020;
-    padding: 20px;
     border-radius: 10px;
-    text-align: center;
+    overflow: hidden;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1);
 }
 
 .project-card img {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    height: 100%;
+    object-fit: cover;
 }
-
-/* Call-to-action button */
-.cta-container {
-    margin-top: 50px;
-}
-
-.btn-cta {
-    display: inline-block;
-    background-color: #FF6600;
-    color: #FFF;
-    padding: 12px 24px;
-    border-radius: 30px;
-    font-size: 16px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.btn-cta:hover {
-    background-color: #E65A00;
-}
-
 /* About Me Section with Background Image */
 .about-me {
     padding: 100px 40px;
-    background: url('https://i.ibb.co/8mV8kRt/Frame-2147225502.jpg') no-repeat center center;
+    background: url('https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/0d7e95e7a413349660c3689e0715c883d573c879/Frame%202147225502.png') no-repeat center center;
     background-size: cover;
     color: #f3f3f3;
     text-align: center;
     position: relative;
 }
 
+/* Adding an overlay effect to make the text readable */
+.about-me::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.about-me .section-heading,
+.about-text {
+    position: relative;
+    z-index: 2;
+}
+
+.about-me .section-heading {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.about-text {
+    font-size: 34px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #ffffffcc;
+}
 /* Adding an overlay effect to make the text readable */
 .about-me::before {
     content: '';
@@ -263,7 +354,7 @@ header .cta {
 }
 
 .service-card {
-    background-color: #202020;
+    background-color: #111111;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -417,9 +508,10 @@ header .cta {
 
 /* Footer Section */
 footer {
-    padding: 20px 0;
+    padding: 10px 0;
     background-color: #111;
     color: #ffffff5e;
     text-align: center;
     font-size: 14px;
 }
+
