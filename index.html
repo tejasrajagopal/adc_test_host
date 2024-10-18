@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Tags and Title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tejas's Portfolio</title>
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,9 +15,9 @@
     <div class="logo">FORGE</div>
     <nav>
         <ul>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">About Me</a></li>
-            <li><button class="cta">Enquire</button></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="https://drive.google.com/file/d/1KoK9-GdxfGlcp9ibbyGG4weCQCSEUaQT/view?usp=sharing" >Resume</a></li>
         </ul>
     </nav>
 </header>
@@ -24,35 +26,42 @@
 <section class="hero">
     <div class="hero-content">
         <h3 class="subheading">WELCOME TO THE FORGE</h3>
-        <h1 class="title">Bringing your vision to reality.</h1>
-        <button class="btn-enquire">Enquire Now</button>
+        <h1 class="title">
+            Bringing your vision<br>
+            to reality.
+        </h1>
+        <a href="#contact" class="btn-enquire">Enquire Now</a>
     </div>
-    <div class="hero-image-wrapper">
-        <div class="hero-image">
-            <img src="https://i.ibb.co/BcJFLW4/Frame-2147225500.jpg">
-        </div>
+    <div class="hero-image hero-image-left">
+        <img src="https://i.ibb.co/71YjQzS/asdfghjkkl.png" alt="Left Image">
+    </div>
+    <div class="hero-image hero-image-right">
+        <img src="https://i.ibb.co/71YjQzS/asdfghjkkl.png" alt="Right Image">
     </div>
 </section>
 
 <!-- Portfolio Section -->
-<section class="portfolio">
+<section id="work" class="portfolio">
     <h2 class="section-heading">Some of My Best Works</h2>
     <div class="projects-carousel">
         <div class="carousel-track">
-            <div class="project-card"><img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/0d7e95e7a413349660c3689e0715c883d573c879/Frame%201321318451.png" alt="Project 1"></div>
-            <div class="project-card"><img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/0d7e95e7a413349660c3689e0715c883d573c879/Frame%201321318452.png" alt="Project 2"></div>
-            <div class="project-card"><img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/0d7e95e7a413349660c3689e0715c883d573c879/Frame%201321318453.png" alt="Project 3"></div>
-            <div class="project-card"><img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/0d7e95e7a413349660c3689e0715c883d573c879/Frame%201321318454.png" alt="Project 4"></div>
-            <div class="project-card"><img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/0d7e95e7a413349660c3689e0715c883d573c879/Frame%201321318455.png" alt="Project 5"></div>
-            <div class="project-card"><img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/0d7e95e7a413349660c3689e0715c883d573c879/Frame%201321318456.png" alt="Project 6"></div>
-            <div class="project-card"><img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/0d7e95e7a413349660c3689e0715c883d573c879/Frame%201321318457.png" alt="Project 7"></div>
-            <div class="project-card"><img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/0d7e95e7a413349660c3689e0715c883d573c879/Frame%201321318458.png" alt="Project 8"></div>
+            <!-- Project Cards -->
+            <div class="project-card"><img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/main/Frame%201321318451.png" alt="Project 1"></div>
+            <div class="project-card"><img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/main/Frame%201321318452.png" alt="Project 2"></div>
+            <div class="project-card"><img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/main/Frame%201321318453.png" alt="Project 3"></div>
+            <div class="project-card"><img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/main/Frame%201321318454.png" alt="Project 4"></div>
+            <div class="project-card"><img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/main/Frame%201321318455.png" alt="Project 5"></div>
+            <div class="project-card"><img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/main/Frame%201321318456.png" alt="Project 6"></div>
+            <div class="project-card"><img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/main/Frame%201321318457.png" alt="Project 7"></div>
+            <div class="project-card"><img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/main/Frame%201321318458.png" alt="Project 8"></div>
         </div>
     </div>
+    <!-- Added Button Below Featured Works -->
+    <button class="btn-view-more">View More Projects</button>
 </section>
 
 <!-- About Me Section -->
-<section class="about-me">
+<section id="about" class="about-me">
     <h2 class="section-heading">About Me</h2>
     <p class="about-text">
         Hi, I'm Tejas, a multidisciplinary designer from Bangalore, India, with a focus on product & communication design.
@@ -63,11 +72,11 @@
 <section class="brands">
     <h2 class="section-heading">Brands I've Worked With</h2>
     <div class="brands-grid">
-        <img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/0d7e95e7a413349660c3689e0715c883d573c879/Button%20Style%2010.png">
-        <img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/0d7e95e7a413349660c3689e0715c883d573c879/Button%20Style%2011.png" alt="Brand 2">
-        <img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/0d7e95e7a413349660c3689e0715c883d573c879/Button%20Style%2012.png">
-        <img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/0d7e95e7a413349660c3689e0715c883d573c879/Button%20Style%208.png">
-        <img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/0d7e95e7a413349660c3689e0715c883d573c879/Button%20Style%209.png">
+        <a href="https://example.com/brand1"><img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/main/Button%20Style%2010.png" alt="Brand 1"></a>
+        <a href="https://example.com/brand2"><img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/main/Button%20Style%2011.png" alt="Brand 2"></a>
+        <a href="https://example.com/brand3"><img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/main/Button%20Style%2012.png" alt="Brand 3"></a>
+        <a href="https://example.com/brand4"><img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/main/Button%20Style%208.png" alt="Brand 4"></a>
+        <a href="https://example.com/brand5"><img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/main/Button%20Style%209.png" alt="Brand 5"></a>
     </div>
 </section>
 
@@ -75,20 +84,21 @@
 <section class="services">
     <h2 class="section-heading">Services Offered</h2>
     <div class="services-grid">
+        <!-- Service Cards -->
         <div class="service-card">
-            <img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/0d7e95e7a413349660c3689e0715c883d573c879/Frame%202147225504.png">
+            <img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/main/Frame%202147225504.png" alt="Designing A Brand">
             <h3>Designing A Brand</h3>
         </div>
         <div class="service-card">
-            <img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/0d7e95e7a413349660c3689e0715c883d573c879/Frame%202147225505.png">
+            <img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/main/Frame%202147225505.png" alt="Building A Website">
             <h3>Building A Website</h3>
         </div>
         <div class="service-card">
-            <img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/0d7e95e7a413349660c3689e0715c883d573c879/Frame%202147225506.png">
+            <img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/main/Frame%202147225506.png" alt="Developing An App">
             <h3>Developing An App</h3>
         </div>
         <div class="service-card">
-            <img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/0d7e95e7a413349660c3689e0715c883d573c879/Frame%202147225507.png">
+            <img src="https://raw.githubusercontent.com/tejasrajagopal/adc_test_host/main/Frame%202147225507.png" alt="Creating Creatives">
             <h3>Creating Creatives</h3>
         </div>
     </div>
@@ -98,22 +108,23 @@
 <section class="testimonials">
     <h2 class="section-heading">Client Testimonials</h2>
     <div class="testimonials-grid">
+        <!-- Testimonial Cards -->
         <div class="testimonial-card">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.</p>
+            <p>Tejas is an exceptional designer who truly understands our vision and brings it to life flawlessly.</p>
             <div class="client-info">
                 <img src="https://via.placeholder.com/50x50" alt="Client 1">
                 <h4>Client 1</h4>
             </div>
         </div>
         <div class="testimonial-card">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.</p>
+            <p>Working with Tejas was a delight. His creativity and professionalism are unmatched.</p>
             <div class="client-info">
                 <img src="https://via.placeholder.com/50x50" alt="Client 2">
                 <h4>Client 2</h4>
             </div>
         </div>
         <div class="testimonial-card">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.</p>
+            <p>Highly recommend Tejas for any design needs. His work exceeded our expectations.</p>
             <div class="client-info">
                 <img src="https://via.placeholder.com/50x50" alt="Client 3">
                 <h4>Client 3</h4>
@@ -123,7 +134,7 @@
 </section>
 
 <!-- Contact Form Section -->
-<section class="contact">
+<section id="contact" class="contact">
     <h2 class="section-heading">Let's work together</h2>
     <p class="contact-description">
         Ready to bring your vision to life? Let's create something remarkable together. Have a project in mind? Let's discuss and get started!
@@ -141,10 +152,10 @@
         <button type="submit" class="btn-submit">Submit</button>
     </form>
     <div class="social-links">
-        <a href="#"><img src="https://via.placeholder.com/24x24" alt="Facebook"></a>
-        <a href="#"><img src="https://via.placeholder.com/24x24" alt="Instagram"></a>
-        <a href="#"><img src="https://via.placeholder.com/24x24" alt="Dribbble"></a>
-        <a href="#"><img src="https://via.placeholder.com/24x24" alt="Behance"></a>
+        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/640px-2023_Facebook_icon.svg.png" alt="Facebook"></a>
+        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png?20200512141346" alt="Instagram"></a>
+        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/640px-Gmail_icon_%282020%29.svg.png"  alt="Dribbble"></a>
+       
     </div>
 </section>
 
